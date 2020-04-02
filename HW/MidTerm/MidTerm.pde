@@ -1,3 +1,6 @@
+// Giancarlo Macias                  DodgeBall                       dont die
+
+
 //------------------------------------------------Imports----------------------------------------------------------------------------------
 import processing.video.*; 
 import processing.sound.*;
@@ -11,6 +14,14 @@ SoundFile song3;
 boolean GameOn= false;
 boolean MainMenu=true;
 boolean GameOver=false;
+//-------------------------Just 4 credit-------------
+String[] arr = { "Hi", "Hola", "Bonjour" };
+String greeting=arr[int(random(0,3))];
+
+
+
+
+
 //-------------------------Ball 1 Variables-------------
 float movingX;
 float movingY;
@@ -98,13 +109,14 @@ void MainMenu(){
 end.stop();
 intro.loop();
 image(intro, width/2, height/2,width,height);
+textSize(20);
+text(greeting,40,20);
 textSize(60);
 fill(255,255,0);
 text("DodgeBall", width/2, 60); 
 text("By Giancarlo Macias", width/2, 130); 
 text("Click to Start", width/2, height-100); 
 text("Current High Score: 39,473", width/2, 400); 
-
 song2.stop();
 song3.stop();
 if(!song1.isPlaying()){ 
@@ -289,7 +301,7 @@ void GameOver(){
         } 
   if (keyPressed==true) {
   if ( key == ' ' ) {
-    
+      greeting=arr[int(random(0,3))];
       GameOver=false;
       GameOn=false;
       MainMenu = true;
