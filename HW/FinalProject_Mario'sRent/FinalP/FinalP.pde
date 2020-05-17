@@ -1,8 +1,10 @@
-/*
-Reads values from serial port, written to the port by Arduino.
- The size of an ellipse changes according to the serial values.
- Must assign the correct port, see instructions below!
- */
+// Giancarlo Macias
+// Mario's Rent
+
+// Instructions: Collect the coins as fast as you can to pay your rent. 
+// Twist potentiometer to go right or left, tap photocell to jump.
+
+
 
 import processing.serial.*; //imports Serial library from Processing
   
